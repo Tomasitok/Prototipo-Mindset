@@ -843,6 +843,105 @@
         body.dark-mode .accessibility-toggle {
             background-color: #333;
         }
+        .about-content {
+        display: grid;
+        gap: 2rem;
+    }
+    
+    .about-info {
+        background-color: white;
+        border-radius: 8px;
+        padding: 2rem;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    
+    .about-values {
+        padding-left: 1.5rem;
+        margin: 1rem 0;
+    }
+    
+    .about-values li {
+        margin-bottom: 0.5rem;
+    }
+    
+    .team-members {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 1.5rem;
+        margin-top: 1rem;
+    }
+    
+    .team-member {
+        background-color: white;
+        border-radius: 8px;
+        padding: 1.5rem;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    
+    .team-img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 0 auto 1rem;
+    }
+    
+    .team-member h4 {
+        margin-bottom: 0.3rem;
+    }
+    
+    .team-member p {
+        color: #666;
+    }
+    
+    .partners-logos {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+    
+    .partner-logo {
+        max-width: 120px;
+        height: auto;
+        filter: grayscale(100%);
+        transition: filter 0.3s;
+    }
+    
+    .partner-logo:hover {
+        filter: grayscale(0%);
+    }
+    
+    .contact-info {
+        background-color: white;
+        border-radius: 8px;
+        padding: 2rem;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    
+    .contact-info p {
+        margin-bottom: 1rem;
+    }
+    
+    /* Estilo para navegación suave */
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    /* Ajustes para modo oscuro */
+    body.dark-mode .about-info,
+    body.dark-mode .team-member,
+    body.dark-mode .contact-info {
+        background-color: #2a2a2a;
+    }
+    
+    body.dark-mode .team-member p,
+    body.dark-mode .about-values li {
+        color: #d1d1d1;
+    }
     </style>
 </head>
 <body>
@@ -1004,7 +1103,77 @@
         
         <div class="courses">
             <div class="course-card">
-                <img src="/api/placeholder/280/160" alt="Curso" class="course-image">
+                <img src="/images/card.jpg" alt="Curso" class="course-image">
                 <div class="course-content">
                     <div class="course-category">Tecnología</div>
                     <h3 class="course-title">Introducción a la Programación</h3>
+
+    <!-- Sección Sobre Nosotros -->
+    <section id="about" class="container">
+        <div class="section-title">
+            <h2>Sobre Nosotros</h2>
+            <p>Conoce nuestra misión, visión y el equipo detrás de EduLibre</p>
+        </div>
+        
+        <div class="about-content">
+            <div class="about-info">
+                <h3>Nuestra Misión</h3>
+                <p>En EduLibre creemos que la educación de calidad es un derecho fundamental. Nuestra misión es eliminar las barreras de acceso al conocimiento proporcionando recursos educativos gratuitos y de alta calidad a personas de todo el mundo, sin importar su ubicación geográfica o situación económica.</p>
+                
+                <h3>Nuestra Visión</h3>
+                <p>Aspiramos a crear un mundo donde todas las personas tengan acceso igualitario a oportunidades de educación que les permitan desarrollar su potencial completo y contribuir positivamente a sus comunidades.</p>
+                
+                <h3>Nuestros Valores</h3>
+                <ul class="about-values">
+                    <li><strong>Accesibilidad:</strong> Diseñamos nuestra plataforma para que sea accesible para todos, incluyendo personas con discapacidades y aquellas con conexiones a internet limitadas.</li>
+                    <li><strong>Calidad:</strong> Nos comprometemos a ofrecer contenido educativo de la más alta calidad, revisado por expertos en cada área.</li>
+                    <li><strong>Comunidad:</strong> Fomentamos un entorno colaborativo donde estudiantes y educadores pueden aprender juntos y apoyarse mutuamente.</li>
+                    <li><strong>Innovación:</strong> Buscamos constantemente nuevas formas de mejorar la experiencia de aprendizaje utilizando tecnologías emergentes.</li>
+                </ul>
+            </div>
+            
+            <div class="about-team">
+                <h3>Nuestro Equipo</h3>
+                <div class="team-members">
+                    <div class="team-member">
+                        <img src="images/equipo-tomas.jpg" alt="Director" class="team-img">
+                        <h4>Ing. Tomas Aristizabal Gomez</h4>
+                        <p>Director Ejecutivo</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="images/equipo-nicolas.jpg" alt="Directora Académica" class="team-img">
+                        <h4>Ing. Juan Nicolas Chaparro Rodriguez</h4>
+                        <p>Directora Académica</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="images/equipo-guillermo.jpg" alt="Directora Académica" class="team-img">
+                        <h4>Ing. Guillermo Toloza Guzman</h4>
+                        <p>Directora Académica</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="images/equipo-reyder.jpg" alt="Director Tecnología" class="team-img">
+                        <h4>Ing. Reyder Hernandez Silva</h4>
+                        <p>Director de Tecnología</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="about-partners">
+                <h3>Nuestros Aliados</h3>
+                <div class="partners-logos">
+                    <img src="images/aliado-david.jpeg" alt="Aliado 1" class="partner-logo">
+                    <img src="images/aliado-gabriel.jpeg" alt="Aliado 2" class="partner-logo">
+                    <img src="images/aliado-yeison.jpeg" alt="Aliado 3" class="partner-logo">
+                    <img src="images/aliado-camila.jpg" alt="Aliado 4" class="partner-logo">
+                </div>
+            </div>
+            
+            <div class="contact-info">
+                <h3>Contacto</h3>
+                <p>¿Tienes preguntas o comentarios? ¡Nos encantaría escucharte!</p>
+                <p><strong>Email:</strong> contacto@edushare.org</p>
+                <p><strong>Teléfono:</strong> +57 3896781245</p>
+                <button class="btn btn-primary">Envíanos un mensaje</button>
+            </div>
+        </div>
+    </section>
